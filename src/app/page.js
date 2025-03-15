@@ -1,95 +1,34 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { feedbacks } from "@/Components/Feedback/dum";
+import NavBar from "@/Components/NavBar";
+import ReportCard from "@/Components/Report";
+import FormReport from "@/Components/Report/form";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div className="pb-36">
+      <div className="px-44">
+        <div className="flex justify-center font-jakarta pt-5">
+          <NavBar />
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="flex text-7xl font-bold justify-center items-center h-96 py-11 font-roboto">
+          <h1 className="text-pgreen">Infras</h1>
+          <h1 className="text-pyellow">Report</h1>
+        </div>
+        <div className="font-jakarta">
+          <div className="flex justify-center py-6">
+            <h1 className="text-4xl text-[#D1D5DB] font-light">Data Laporan</h1>
+          </div>
+          <div className="flex gap-4">
+            <ReportCard title={"Laporan"} total={192} logo={"laporan"} />
+            <ReportCard title={"Diproses"} total={50} logo={"diproses"} />
+            <ReportCard title={"Selesai"} total={46} logo={"selesai"} />
+          </div>
+        </div>
+      </div>
+      <div className="py-8 gap-4 grid grid-cols-4">{feedbacks}</div>
+      <div className="px-44">
+        <FormReport />
+      </div>
     </div>
   );
 }
