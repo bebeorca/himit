@@ -22,7 +22,7 @@ const NavItem = ({ item, active, setActive }) => {
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 />
             )}
-            <span className={`text-xs relative z-10 ${active === item ? "font-bold" : "font-normal"}`}>
+            <span className={`text-sm md:text-2xl relative z-10 ${active === item ? "font-bold" : "font-normal"}`}>
                 {item}
             </span>
         </motion.div>
@@ -44,7 +44,7 @@ const NavBar = () => {
         <div className="flex items-center md:w-full gap-2 md:gap-0 md:px-10">
             {/* Navigation */}
             <div className="flex-1 flex justify-center">
-                <div className="bg-myellow flex rounded-full px-1 py-1 gap-10 items-center">
+                <div className="bg-myellow flex rounded-full px-1 py-1 gap-10 items-center justify-center">
                     {navItems.map((item) => (
                         <NavItem key={item} item={item} active={active} setActive={setActive} />
                     ))}
@@ -54,7 +54,7 @@ const NavBar = () => {
             {/* Tombol Login */}
             <div className="ml-auto">
                 <div className="bg-pgreen rounded-full px-4 py-1">
-                    <a className="text-xs text-white" href="">
+                    <a className="text-xs md:text-2xl text-white" href="">
                         Login
                     </a>
                 </div>

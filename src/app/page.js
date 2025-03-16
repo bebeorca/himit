@@ -10,7 +10,7 @@ export default function Home() {
         <div className="flex justify-center font-jakarta pt-5">
           <NavBar />
         </div>
-        <div className="flex md:text-7xl text-5xl font-bold justify-center items-center h-96 py-11 font-roboto">
+        <div className="flex md:text-8xl text-5xl font-bold justify-center items-center h-96 py-11 font-roboto">
           <h1 className="text-pgreen">Infras</h1>
           <h1 className="text-pyellow">Report</h1>
         </div>
