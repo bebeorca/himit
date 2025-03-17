@@ -8,8 +8,11 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-      <div className="absolute left-0">
-        <Image src="/bg.png" width={100} height={100} alt="komponen" />
+      {/* right: 20px;
+    bottom: 50%;
+    transform: translateY(50%); */}
+      <div className="absolute left-0 bottom-2/3 translate-y-1/2 z-10">
+        <Image src="/gedung.png" width={520} height={100} alt="komponen" />
       </div>
       <div className="px-14 md:px-44">
         <div className="flex justify-center font-jakarta pt-5">
