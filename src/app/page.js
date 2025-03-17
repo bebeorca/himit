@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <div className="absolute left-0">
-        <Image src="bg.png" width={100} height={100} alt="komponen" />
+        <Image src="/bg.png" width={100} height={100} alt="komponen" />
       </div>
       <div className="px-14 md:px-44">
         <div className="flex justify-center font-jakarta pt-5">

@@ -24,7 +24,7 @@ const Item = ({ item, active, setActive }) => {
                 <span className={`text-xs md:text-sm relative z-10 text-pgreen ${active === item ? "font-bold" : "font-normal"}`}>
                     {item}
                 </span>
-                <Image src={`./${active === item ? item + "-c.svg" : item + ".svg"}`} className="md:w-8 w-6" width={30} height={30} alt={item} />
+                <Image src={`/${active === item ? item + "-c.svg" : item + ".svg"}`} className="md:w-8 w-6" width={30} height={30} alt={item} />
             </div>
         </motion.div>
     )
