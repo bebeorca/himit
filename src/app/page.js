@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="relative">
-      <div style={{ zIndex: 0 }} className="absolute z-0 left-0">
+      <div style={{ zIndex: -1 }} className="absolute z-[-1] left-0 top-0 w-[50vw] md:w-[70vw] -ml-10 md:-ml-20">
         <Image className="z-0" src="/gedung.png" width={520} height={100} alt="komponen" />
       </div>
       <div className="px-14 md:px-44">
